@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { BreedsModule } from './breeds/breeds.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    BreedsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
