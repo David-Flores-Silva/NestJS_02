@@ -1,4 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  DeleteDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class Cat {
@@ -13,4 +18,7 @@ export class Cat {
 
   @Column()
   breed: string;
+
+  @DeleteDateColumn()
+  deleteAt: Date;
 }
