@@ -29,8 +29,8 @@ export class UserService {
     return this.usersRepositive.findOneBy({ email });
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    return await this.usersRepositive.update(id, updateUserDto);
   }
 
   remove(id: number) {
